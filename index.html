@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Larry's Landscaping</title>
+    <meta charset="utf-8">
+    <script>
+        function takeOrder() {
+            var buying = [0, 0, 0];
+            var products = ["hotdogs", "fries", "sodas"];
+            var prices = [3.75, 2, 1.8];
+            var subtotal = 0;
+            for (i = 0; i < 3; i++) {
+                buying[i] = parseInt(prompt("How many " + products[i] + " would you like?"));
+                while (isNaN(buying[i])) {
+                    buying[i] = parseInt(prompt("Must be a number: How many " + products[i] + " would you like?"));
+                }
+                subtotal += prices[i] * buying[i];
+            }
+            document.getElementById("list").innerHTML = "Hotdogs:<br>Fries:<br>Sodas:<br>Subtotal:<br>Discount:<br>Tax:<br>Total:";
+            var discount = "None";
+            var tax = subtotal * 0.0625;
+            var total = subtotal + tax;
+            if (subtotal > 20) {
+                discount = -0.1 * subtotal;
+                total += discount;
+                discount = discount.toFixed(2);
+            }
+
+            total = total.toFixed(2);
+            tax = tax.toFixed(2);
+            document.getElementById("costs").innerHTML = buying[0] + "<br>" + buying[1] + "<br>" + buying[2] + "<br>" + subtotal + "<br>" + discount + "<br>" + tax + "<br>" + total;
+
+        }
+    </script>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body onload="takeOrder()">
+    <div class="header">
+        <h1>Joe's Hotdogs</h1>
+    </div>
+
+    <div class="topnav">
+        <p>Order Summary</p>
+    </div>
+    <div class="row" style=" background-image: linear-gradient(#666, #ddd);">
+        <div class="column ">
+            <h2>Your Order</h2>
+        </div>
+    </div>
+    <div class="row" style=" background: #ddd;">
+
+        <div class="column2" id="list">
+
+        </div>
+        <div class="column2" id="costs">
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

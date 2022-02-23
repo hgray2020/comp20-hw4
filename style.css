@@ -1,0 +1,116 @@
+:root {
+    --hot-dog: hsl(0, 80%, 16%);
+    --light-bg: #eedddd;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Trebuchet MS";
+    color: var(--hot-dog);
+}
+
+p {
+    font-size: 22px;
+    color: var(--hot-dog);
+}
+
+h1 {
+    font-size: 70px;
+    color: var(--light-bg);
+    font-family: 'Garamond';
+}
+
+h2 {
+    font-size: 45px;
+    font-family: 'Garamond';
+}
+
+a {
+    color: var(--hot-dog);
+    padding: px;
+}
+
+a:hover {
+    color: #279f27;
+}
+
+body {
+    background-color: #ddd;
+    font-family: verdana;
+    margin: 0px;
+}
+
+.header {
+    background-image: url('header.png');
+    background-position: center;
+    background-size: 80vw;
+    padding: 20px;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    font-family: 'Garamond';
+}
+
+.topnav p {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Garamond';
+}
+
+.column1 {
+    background: none;
+    float: left;
+    width: 98%;
+    padding: 1%;
+    margin: 0.5%;
+}
+
+.column2 {
+    background: none;
+    float: left;
+    width: 48%;
+    padding: 1%;
+    margin: 1%;
+}
+
+.column3 {
+    background: none;
+    float: left;
+    width: 31.33%;
+    padding: 1%;
+    margin: 1%;
+}
+
+.column {
+    background: none;
+    float: left;
+    width: 80%;
+    padding: 1%;
+    margin: 1%
+}
+
+.side {
+    background: none;
+    float: right;
+    width: 16%;
+    padding: 1%;
+    margin: 1%
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+img {
+    margin-top: 20px;
+}
